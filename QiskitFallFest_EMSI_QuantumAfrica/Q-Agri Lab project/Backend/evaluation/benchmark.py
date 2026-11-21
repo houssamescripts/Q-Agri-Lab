@@ -1,7 +1,3 @@
-from fastapi import fastapi
+from app.evaluation.benchmark import compare_models
 
-
-from sklearn.metrics import confusion_matrix
-
-
-confusion_matrix()
+__all__ = ["compare_models"]

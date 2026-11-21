@@ -1,17 +1,3 @@
-from fastapi import fastapi
-from pydantic import BaseModel
+from app.api.routes.experiments import ComparisonRequest, ExperimentRequest, compare, create_experiment, get_dataset, router
 
-
-
-class Item(Basemodel):
-  name: str,
-  description: str 
-  price: float:
-  tax: float 
-
-
-app = FastApi()
-
-@app.post("/item")
-async def createitem(item:item):
-   return item
+__all__ = ["ComparisonRequest", "ExperimentRequest", "compare", "create_experiment", "get_dataset", "router"]

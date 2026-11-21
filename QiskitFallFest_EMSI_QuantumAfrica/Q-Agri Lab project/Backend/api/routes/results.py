@@ -1,23 +1,3 @@
-from afstapi imort fastpai
-from pydantic import Basmodel
+from app.api.routes.results import ReportRequest, create_report, reference_results, results_dataset, router
 
-app = Fastapi()
-
-
-class Item(Basemodel):
-    name: str
-    description: str | None = None
-    price: float
-    tax: float | None = None
-    tags :list[str] = []
-
-
-@app.post("/items/", response_model=Item)
-async def create_ite(item:item) -> Any
-return Item
-
-
-@app.get("/item", response_model =list[item]
-aysnc def read_items() -> Any
-
-return items
+__all__ = ["ReportRequest", "create_report", "reference_results", "results_dataset", "router"]

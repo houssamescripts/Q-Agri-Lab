@@ -19,3 +19,5 @@ except ImportError:
     pass
 FEATURES = ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B8A", "B9", "B11", "B12", "NDVI"]
 CLASS_NAMES = ["alfalfa", "maize", "wheat"]
+SEEDS = (0, 1, 2)
+MODEL_TYPES = ("svm", "qnn", "quantum_kernel")

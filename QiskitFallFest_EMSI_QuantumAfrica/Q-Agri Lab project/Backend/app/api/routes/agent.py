@@ -1,6 +1,7 @@
 import os
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
+from app.agents.research_agent import ResearcherAgent
 
 router = APIRouter(prefix="/agent", tags=["AI Agent"])
 
@@ -12,14 +13,8 @@ def chat(request: ChatRequest):
     if not os.getenv("OPENAI_API_KEY"):
         raise HTTPException(503, "OPENAI_API_KEY is not configured; dataset and experiment endpoints remain available.")
     try:
-        from openai import OpenAI
-        client = OpenAI()
-        response = client.responses.create(
-            model=os.getenv("OPENAI_MODEL", "gpt-4.1-mini"),
-            instructions="You are Q-Agri Lab, a research assistant for the supplied Moroccan crop classification challenge. Classes: alfalfa, maize, wheat. Official splits: 914 train, 150 validation, 221 unlabeled test. Never claim experimental results unless they are supplied. Preserve spatial splits; use validation for model selection and test only for final predictions.",
-            input=request.message,
-        )
-        return {"response": response.output_text, "status": "success"}
+        response = ResearcherAgent().run(request.message)
+        return {"response": response, "status": "success"}
     except Exception as exc:
         # Keep credential failures actionable; the key itself is never returned.
         try:

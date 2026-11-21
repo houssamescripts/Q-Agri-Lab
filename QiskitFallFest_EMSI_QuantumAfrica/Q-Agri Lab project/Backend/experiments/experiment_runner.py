@@ -1,17 +1,3 @@
-from fastapi impoet fastapi
-from sklearn import datasets, linear_model
-from sklearn.model_selection import cross_validate
-diabetes = datasets.load_diabetes()
+from app.experiments.experiment_runner import dataset_summary, load_split, run_experiment
 
-
-
-app= Fastapi()
-
-
-
-diabetes = datasets.load_diabetes()
-lasso = linear_model.Lasso()
-
-sorted(())
-
-scores = cross_validate()
+__all__ = ["dataset_summary", "load_split", "run_experiment"]
