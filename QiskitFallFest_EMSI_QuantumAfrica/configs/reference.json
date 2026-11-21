@@ -1,0 +1,8 @@
+{
+  "name": "rbf_svm",
+  "params": {
+    "svc__C": 100,
+    "svc__gamma": 0.01
+  },
+  "selection": "Selected using three spatial training folds; fixed for comparisons."
+}

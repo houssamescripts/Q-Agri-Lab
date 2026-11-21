@@ -1,0 +1,83 @@
+{
+  "version": "914-150-221-v1",
+  "labels": [
+    "alfalfa",
+    "maize",
+    "wheat"
+  ],
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B9",
+    "B11",
+    "B12",
+    "NDVI"
+  ],
+  "rows": {
+    "train": 914,
+    "validation": 150,
+    "test": 221
+  },
+  "observation_date": "2024-04-25",
+  "survey_dates": [
+    "2024-04-23",
+    "2024-04-24",
+    "2024-04-25",
+    "2024-04-26",
+    "2024-04-27"
+  ],
+  "temporal_policy": {
+    "status": "ACCEPTED_ASSUMPTION",
+    "max_calendar_gap_days": 2,
+    "independently_verified": false,
+    "description": "Crop labels are assumed unchanged between survey and imagery dates within two calendar days."
+  },
+  "class_counts": {
+    "train": {
+      "alfalfa": 247,
+      "maize": 242,
+      "wheat": 425
+    },
+    "validation": {
+      "alfalfa": 50,
+      "maize": 50,
+      "wheat": 50
+    },
+    "test": {
+      "alfalfa": 42,
+      "maize": 77,
+      "wheat": 102
+    }
+  },
+  "files": {
+    "training_600_ids.json": "5e32d3a8b314b60101e7f53d79346126a10aab597c64015fb491bdc1eaf2afb7",
+    "starter_ids.json": "5a353267b685eabca3f54ccbefe216eed0d6452bb2b9c1690bfe1dd3891140e5",
+    "validation.csv": "44e42c2dff522cadffb0e4c77042d4764806500ddaa732c561b9c1d995ef88e9",
+    "validation_groups.json": "7a687c9cab31032c2fa65bf58ece505e32cddaaa37dfe44b84cd63b708bf865f",
+    "train.csv": "94865bb59af911ada473b7cde99b43238921419b5b6bf1602a659a8f19ca42d1",
+    "test.csv": "bf215bc0a1e15f1ac0a355f3cc5735d08d72774ac8848c3bd95e459e77c6a043",
+    "README.md": "789135ef141a073d022a3f7543679708cdbaec52b431c2ff16c2e2f107f482e0",
+    "views/pca8.npz": "af7c9b3d4e9d1eb4a5151248a619df83893e44d4ed5fc870f5059bb0783976c6",
+    "views/pca4.npz": "106c3ee63561e76151bc85db327cdc12436db55704ea6cc0b9f40bdd584744ac"
+  },
+  "spatial_policy": {
+    "cell_size_m": 2000,
+    "minimum_cross_split_polygon_distance_m": 100
+  },
+  "spatial_minima_m": {
+    "train_validation": 157.43415194969808,
+    "train_test": 116.46955627009181,
+    "validation_test": 101.8274292053122
+  },
+  "survey_date_range": [
+    "2024-04-23",
+    "2024-04-27"
+  ]
+}

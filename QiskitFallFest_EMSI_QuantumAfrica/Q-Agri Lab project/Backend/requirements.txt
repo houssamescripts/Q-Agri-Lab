@@ -1,0 +1,10 @@
+# Core API and data stack. Qiskit/ML versions match the challenge environment.
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+openai>=1.50,<3
+python-dotenv>=1,<2
+pandas>=2.2,<4
+numpy>=2,<3
+scikit-learn>=1.5,<2
+qiskit==2.4.2
+qiskit-machine-learning==0.9.1

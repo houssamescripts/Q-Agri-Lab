@@ -1,0 +1,18 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "qnn_max_evals": 100,
+  "qubits": 4,
+  "encoding": "ry",
+  "readout": "int(outcome) % 3",
+  "labels": [
+    "alfalfa",
+    "maize",
+    "wheat"
+  ],
+  "exact_shots": null,
+  "temporal_policy": "ACCEPTED_ASSUMPTION: \u00b12 calendar days"
+}
